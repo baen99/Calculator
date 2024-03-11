@@ -77,7 +77,13 @@ namespace CalculatorProgram
 
                 Console.WriteLine("\n"); // Friendly linespacing.
             }
-            Trace.WriteLine(String.Format("Ended {0}", System.DateTime.Now.ToString()));
+            
+            // can also access Trace from Program.cs
+            //Trace.WriteLine(String.Format("Ended {0}", System.DateTime.Now.ToString()));
+
+            // Add call to close the JSON writer befor return
+            calculator.Finish();
+
             return;
         }
     }
